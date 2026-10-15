@@ -74,3 +74,23 @@ function tiraDado() {
     const numero = generaNumero();
     alert(`Hai ottenuto: ${numero}`);
 }
+
+/* -------------------Esercizio Finale------------------------- */
+
+function calcolaArea(base, altezza) {
+    return base * altezza;
+}
+
+function areaRettangolo() {
+    const risultato = calcolaArea(12, 7);
+    alert(`L'area del rettangolo è: ${risultato}`);
+}
+
+function calcolaIva(prezzo, iva) {
+    return prezzo * iva / 100;
+}
+
+function prezzoConIva() {
+    const risultato = calcolaIva(85, 22);
+    alert(`Costo Iva inclusa: ${risultato + 85}`);
+}
