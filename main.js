@@ -260,9 +260,9 @@ const lista2 = ["pane", "piselli", "ravioli"];
 
 function arrayChecker(array, stringa) {
     if (!array || !stringa) {
-        return trovato = false + " Mancano i parametri di partenza";
+        return false + " Mancano i parametri di partenza";
     } else if (array >= 0 || array <= 0) {
-        return trovato = false + " Il parametro di partenza non è una lista";
+        return false + " Il parametro di partenza non è una lista";
     }
 
     const stringCheck = array.every(item => item >= 0 || item <= 0);
