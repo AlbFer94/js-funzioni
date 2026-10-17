@@ -186,7 +186,7 @@ console.log(minimum);
 
 
 /* -------------------Esercizio Finale------------------------------- */
-
+/* 
 const lista = [{ prodotto: "Pantalone", prezzo: 20 },
 { prodotto: "T-shirt", prezzo: 25 },
 { prodotto: "felpa", prezzo: 35 },
@@ -219,4 +219,66 @@ const prezziValidi = lista.every(articolo => articolo.prezzo >= 10);
 console.log(prezziValidi);
 
 const calcolaSconto = prezzo => prezzo * 0.9;
-console.log(calcolaSconto(lista[1].prezzo));
+console.log(calcolaSconto(lista[1].prezzo)); */
+
+/* ********************************************************************************************************** */
+
+/* Traccia Extra Luca */
+
+/* let trovato = false;
+
+function arrayChecker(array, stringa) {
+
+    if (!array || !stringa) {
+        return trovato = false + " Mancano i parametri di partenza";
+    } else if (array >= 0 || array <= 0) {
+        return trovato = false + " Il parametro di partenza non è una lista";
+    }
+
+    for (let i = 0; i < array.length; i++) {
+        let item = array[i];
+
+        if (item >= 0 || item <= 0) {
+            console.log("l'array non è composto da stringhe ma da numeri");
+            return trovato = false;
+        } if (item == stringa) {
+            return trovato = true;
+        } else {
+            trovato = false;
+        }
+    }
+    console.log(trovato);
+}
+
+const lista = ["pane", "piselli", "ravioli"];
+
+ *//* 
+*/
+
+const lista1 = [45, 55, 66, 787];
+const lista2 = ["pane", "piselli", "ravioli"];
+
+function arrayChecker(array, stringa) {
+    if (!array || !stringa) {
+        return trovato = false + " Mancano i parametri di partenza";
+    } else if (array >= 0 || array <= 0) {
+        return trovato = false + " Il parametro di partenza non è una lista";
+    }
+
+    const stringCheck = array.every(item => item >= 0 || item <= 0);
+
+    if (stringCheck) {
+        console.log("l'array non è composto da stringhe ma da numeri");
+        return false;
+    }
+
+    const trovaStringa = array.some(item => item === stringa);
+
+    if (trovaStringa) {
+        console.log(true);
+    } else {
+        console.log(false);
+    }
+}
+
+
